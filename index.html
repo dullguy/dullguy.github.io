@@ -5,56 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Egy szuper oldal</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">;
 </head>
 
 <body>
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/pages/products.html">Products</a>
-        </li>
-        <li>
-            <a href="/pages/orders.html">Orders</a>
-        </li>
-        <li>
-            <a href="/about.html">About</a>
-        </li>
-    </ul>
 
-    <h1>
-        Fantastic Burger
-    </h1>
-    <ul>
-        <li>Meat lover
-            <ul>
-                <li>Beef</li>
-                <li>Pork</li>
-                <li>Turkey</li>
-            </ul>
-        </li>
-        <li>Vegetarian</li>
-        <li>Piedone</li>
-    </ul>
+    <div>
+        <button type="randomBeosztas" onclick="randomBeosztas()">Mi a TGA-s beosztásom?</button>
+        <input name="randomBeosztas" id="randomBeosztas">
+    </div>
+    <script>
 
-    <h2>Step of order</h2>
-    <ol>
-        <li>Choose</li>
-        <li>Buy</li>
-        <li>Delivery</li>
-    </ol>
+        let Beosztas1 = Array("Előkészítő", "Kreatív", "Műszaki", "Technikai", "Operatív", "Taktikai", "Elektrotechnikai", "Projekt", "Gépészeti", "Pályázati", "Minőségügyi", "Excelügyi" );
+        let Beosztas2 = Array("Mérnök", "Munkatárs", "Manager", "Vezető", "Asszisztens", "Szakértő", "TS-sel", "Koordinátor", "Terminátor", "Helyettes", "Kontroller", "Félvezető" );
 
-    <a href="http://www.wisiow.hu/">
-        Wisiow
-    </a>
-    <a href="/pages/orders.html">
-        Orders
-    </a>
-    <a target="blank" href="http://www.wisiow.hu/">
-        <img width="56" alt="burger" src=img/Takats2.jpg>
-    </a>
+        function randomBeosztas() {
+            let randomBeosztas = Beosztas1[Math.floor(Math.random() * Beosztas1.length)] + " " + Beosztas2[Math.floor(Math.random() * Beosztas2.length)];
+            document.getElementById('randomBeosztas').value = randomBeosztas;
+        }
+    </script>
 
 </body>
 
